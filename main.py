@@ -1,15 +1,15 @@
 import smtplib
 
-my_email = "" # The email address you want to send from
-password = "" # the password for the email address that you generated under your email account settings in security settings
+MY_EMAIL = "" # The email address you want to send from
+PASSWORD = "" # the PASSWORD for the email address that you generated under your email account settings in security settings
 
 def send_email(recipient, subject, body):
-    global my_email, password
+    global MY_EMAIL, PASSWORD
     try:
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls() # How we connect to email server
-            connection.login(user=my_email, password=password)
-            connection.sendmail(from_addr=my_email, to_addrs=f"{recipient}", msg=f"{subject}\n\n{body}")
+            connection.login(user=MY_EMAIL, password=PASSWORD)
+            connection.sendmail(from_addr=MY_EMAIL, to_addrs=f"{recipient}", msg=f"{subject}\n\n{body}")
     except(smtplib.SMTPException, OSError) as e:
         print(f"Email failed to send: Error - {e}")
 
