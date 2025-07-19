@@ -1,6 +1,5 @@
-# email_amutomation_SMTP
-This is a send email automation project using Google SMTP port and manage dates. Based on a date and time will send out 
-an email to a specified recipient. This is in preparation for another project using APIs.
+# email_sending_SMTP
+This is a send email program that using Google SMTP. This is in preparation for another project using APIs.
 
 ## Topics Covered
 - Python's `smtplib` for sending emails
